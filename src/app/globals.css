@@ -3,12 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #ffffff;
+  --foreground: #111111; /* negro suave */
+  --muted: #666666;     /* textos secundarios */
+  --border: #e5e5e5;    /* líneas divisoras del marco */
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
 body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilo para las barras fijas  */
+.fixed-frame {
+  border-color: var(--border);
 }
