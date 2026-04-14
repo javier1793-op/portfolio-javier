@@ -1,10 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
-  --foreground: #111111; /* negro suave */
+  --foreground: #232427; /* negro suave */
   --muted: #666666;     /* textos secundarios */
   --border: #e5e5e5;    /* líneas divisoras del marco */
 }

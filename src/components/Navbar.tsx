@@ -1,18 +1,19 @@
+
 "use client";
-import React, { useState } from "react";
-import { Mail, Menu, X, Code2 } from "lucide-react";
+import { Mail, Code2 } from "lucide-react";
 import Link from "next/link";
-import { div } from "framer-motion/client";
 
 const Navbar = () => {
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Sobre Mí", href: "#about" },
-    { name: "Proyectos", href: "#projects" },
+    { name: "HOME", href: "#home", active: true },
+    { name: "SOBRE MÍ", href: "#about", active: false },
+    { name: "PROYECTOS", href: "#projects", active: false },
   ];
 
   return (
-    <div className="flex justify-between items-center fixed w-full min-h-[90px] z-50 bg-white border-b border-[var(--border)] py-4">
+    <header className="flex  items-center fixed top-0 w-full min-h-[90px] z-50 bg-white border-b border-[var(--border)] grid grid-cols-[90px_1fr_90px] items-center">
+      
+      {/* 1. LADO IZQUIERDO: LOGO */}
       <Link href={"#home"} className="no-underline text-inherit">
         <div className="z-10 pl-8 bg-[var(--foreground)] min-h-[90px] min-w-[90px] text-[var(--background)] flex flex-col justify-center items-center">
           <Code2 className="text-white w-6 h-6" />
@@ -20,10 +21,36 @@ const Navbar = () => {
         </div>
       </Link>
 
-      <nav className="absolute left-1/2 -translate-x-1/2">menu</nav>
+      {/* 2. CENTRO: MENÚ */}
+      <nav className="flex h-full justify-center items-center ">
+        <ul className="flex items-center gap-16  ">
+        {navLinks.map((link) => (
+      <li key={link.name} className="flex items-center ">
+        <Link 
+          href={link.href} 
+          className={`flex items-center gap-2 text-[11px] no-underline text-inherit font-bold tracking-[0.2em] no-underline transition-colors ${
+            link.active ? "text-black" : "text-gray-400 hover:text-black"
+          }`}
+        >
+          {link.active && <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>}
+          {link.name}
+        </Link>
+      </li>
+    ))}
+        </ul>
+      </nav>
+      {/* 3. LADO DERECHO: MAIL */}
+       <Link
+          href="mailto:javier17utn@gmail.com"
+          className="no-underline text-inherit"
+        >
+          <div className="z-10 pl-8 bg-[var(--foreground)] min-h-[90px] min-w-[90px] text-[var(--background)] flex flex-col justify-center items-center">
+            <Mail className="text-white w-6 h-6" />
+            <span>Contacto</span>
+          </div>
+        </Link>
 
-      <div className="ml-auto z-10">mail</div>
-    </div>
+    </header>
   );
 };
 
