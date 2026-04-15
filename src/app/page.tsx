@@ -1,10 +1,11 @@
+import Hero from "@/components/sections/Hero";
+
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-screen w-[calc(100vw-30vw)]">
       {/* secciones */}
       <section id="home" className="h-screen flex items-center justify-center border-b border-white/10">
-        <h1 className="text-5xl font-bold">Javier Ruiz Diaz - Full Stack Developer
-        </h1>
+       <Hero/>
       </section>
       
       <section id="about" className="h-screen flex items-center justify-center border-b border-white/10">
