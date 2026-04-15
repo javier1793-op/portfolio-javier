@@ -1,3 +1,4 @@
+import AboutMe from "@/components/sections/AboutMe";
 import Hero from "@/components/sections/Hero";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
       </section>
       
       <section id="about" className="h-screen flex items-center justify-center border-b border-white/10">
-        <h2 className="text-3xl">Sobre Mí</h2>
+        <AboutMe/>
       </section>
 
       <section id="projects" className="h-screen flex items-center justify-center">
