@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import RightSidebar from "@/components/RightSidebar";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 
 
 const geistSans = Geist({
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body className={`${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased bg-white text-[#111111]`}>
         <Navbar/>
         <Sidebar/>
+        
         <RightSidebar/>
         {children}
         </body>
