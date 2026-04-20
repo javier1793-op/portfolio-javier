@@ -52,7 +52,7 @@ const AboutMe = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-black mb-8 tracking-tight"
+          className="text-4xl md:text-4xl font-bold text-black mb-8 tracking-tight"
         >
           Hola! Soy Javier, <br />
           <span className="text-gray-400">
@@ -65,7 +65,7 @@ const AboutMe = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-lg text-gray-600 leading-relaxed mb-12"
+          className="text-base text-gray-600 leading-relaxed mb-12"
         >
           Como Analista en Sistemas, mi enfoque va más allá del código: diseño
           arquitecturas que resuelven problemas de negocio. Gestiono plataformas
