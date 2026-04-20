@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const RightSidebar = () => {
   return (
-    <aside className="fixed right-0 top-[90px] w-[30vw] h-[calc(100vh-90px)] border-l border-[var(--border)] bg-white z-40 hidden md:flex flex-col items-center justify-end overflow-hidden">
+    <aside className="fixed right-0 top-[90px] w-[29.5vw] h-[calc(100vh-90px)] border-l border-[var(--border)] bg-white z-40 hidden md:flex flex-col items-center justify-end overflow-hidden">
       
       {/* Transformamos el div en motion.div para la animación */}
       <motion.div
         className="w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://w0.peakpx.com/wallpaper/250/646/HD-wallpaper-kirito-anime-fighting.jpg')",
+            "url('https://t4.ftcdn.net/jpg/13/68/62/17/360_F_1368621760_59KKXeRIDdt3Kaatc89F08g2cspAeUxL.jpg')",
         }}
         // ESTADO INICIAL: 100px abajo y transparente
         initial={{ y: "100%", opacity: 0 }} 
