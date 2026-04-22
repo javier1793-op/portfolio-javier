@@ -5,7 +5,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import RightSidebar from "@/components/RightSidebar";
-import { ScrollProgress } from "@/components/ui/ScrollProgress";
 
 
 const geistSans = Geist({
@@ -34,17 +33,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={` h-full antialiased`}
-    >
+    <html lang="en" className="h-full antialiased">
       <body className={`${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased bg-white text-[#111111]`}>
-        <Navbar/>
-        <Sidebar/>
+        <Navbar />
         
-        <RightSidebar/>
-        {children}
-        </body>
+        {/* Ocultamos las barras laterales en móviles */}
+        <div className="hidden md:block">
+          <Sidebar />
+        </div>
+        
+        <div className="hidden md:block">
+          <RightSidebar />
+        </div>
+
+        {/* El contenido principal debe ocupar el 100% en móvil */}
+        <main className="w-full md:pl-[90px] md:pr-[90px] pt-[90px]">
+          {children}
+          
+        </main>
+      </body>
     </html>
   );
 }
