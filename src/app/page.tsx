@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import AboutMe from "@/components/sections/AboutMe";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
@@ -6,41 +7,49 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 
 export default function Home() {
   return (
-    <div className="flex ">
-      <main className="relative flex flex-col min-h-screen w-[70vw]">
+  
+    <div className="flex flex-col md:flex-row"> 
+     
+      <main className="relative flex flex-col min-h-screen w-full md:w-[70vw]  sm:px-10 md:px-0">
         <ScrollProgress />
 
-        {/* Secciones */}
         <section
           id="home"
-          className="h-screen flex items-center justify-center border-b border-white/10"
+          className="h-screen flex items-center justify-center border-b border-gray-100  md:px-0"
         >
           <Hero />
         </section>
 
         <section
           id="about"
-          className="min-h-screen py-20 flex items-center justify-center border-b border-white/10"
+          className="min-h-screen py-20 flex items-center justify-center border-b border-gray-100 px-6 md:px-0"
         >
           <AboutMe />
         </section>
 
         <section
           id="servicies"
-          className="min-h-screen py-20 flex items-center justify-center border-b border-white/10"
+          className="min-h-screen py-20 flex items-center justify-center border-b border-gray-100 px-6 md:px-0"
         >
           <Services />
         </section>
 
         <section
           id="projects"
-          className="py-20 flex items-center justify-center"
+          className="py-20 flex items-center justify-center px-6 md:px-0"
         >
           <Projects />
         </section>
+        <br />
+        <section
+         
+          className="py-20 flex items-center  justify-center px-6 md:px-0"
+        >
+         <Footer/>
+        </section>
       </main>
 
-      <aside className="fixed right-0 top-0 w-[30vw] h-screen"></aside>
+      
     </div>
   );
 }

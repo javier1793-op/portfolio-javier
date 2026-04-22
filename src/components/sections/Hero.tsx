@@ -33,28 +33,29 @@ export default function Hero() {
       </motion.div>
 
     
+      {/* 2. TÍTULO: Cambiamos 4vw por tamaños fijos responsivos */}
       <motion.h1
-        className="text-[4vw] font-bold tracking-tighter text-black leading-none uppercase mb-2 select-none"
+        className="text-4xl sm:text-5xl md:text-[4vw] font-bold tracking-tighter text-black leading-none uppercase mb-4 select-none text-center px-4"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, ease: [0.19, 1, 0.22, 1], delay: 0.6 }} // Ease premium
+        transition={{ duration: 1, ease: [0.19, 1, 0.22, 1], delay: 0.6 }}
       >
-        JAVIER ALEJANDRO
+        Javier <br className="md:hidden" /> Alejandro
       </motion.h1>
 
-      
+      {/* 3. DESCRIPCIÓN: Ajustamos el max-w para que no pegue en los bordes */}
       <motion.div
-        className="text-center max-w-[600px] flex flex-col items-center"
+        className="text-center w-full max-w-[320px] sm:max-w-[500px] md:max-w-[600px] flex flex-col items-center px-6"
         variants={fadeInUp}
         initial="initial"
         animate="animate"
-        transition={{ duration: 0.8, delay: 0.9 }} // Retraso mayor para jerarquía visual
+        transition={{ duration: 0.8, delay: 0.9 }}
       >
-        <span className="text-[11px] font-bold tracking-[0.4em] text-gray-500 uppercase mb-4">
-          Analista en Sistemas & Full Stack Developer
+        <span className="text-[10px] md:text-[11px] font-bold tracking-[0.3em] md:tracking-[0.4em] text-gray-500 uppercase mb-4">
+          Analista en Sistemas & <br className="md:hidden" /> Full Stack Developer
         </span>
         
-        <p className="text-sm text-gray-700 leading-relaxed font-light px-4">
+        <p className="text-sm md:text-base text-gray-700 leading-relaxed font-light">
           Desarrollo aplicaciones web enfocadas en la calidad, la escalabilidad y la experiencia del usuario.
         </p>
       </motion.div>
